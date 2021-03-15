@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="fr">
+<head>
+	<meta charset="utf-8">
+	<title>Applet Rubik's cube</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script type="text/javascript" src="applet.js"></script>
+</head>
+<body>
+	<div id="container">
+		<div id="top">
+			<canvas id="cube-viewer" tabindex='1' width="620" height="400"></canvas>
+		</div>
+		<div id="bottom">
+			<div id="queue"></div>
+			
+			<button id="lancer" onclick="controller.lancer()">Lancer</button>
+			<div id="nbrotations"></div>
+			<button id="melanger" onclick="controller.mix()">Mélanger</button>
+		</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="fr">
+<head>
+	<meta charset="utf-8">
+	<title>Applet Rubik's cube</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script type="text/javascript" src="applet.js"></script>
+</head>
+<body>
+	<div id="container">
+		<div id="top">
+			<div id="left">
+				<button id="r" class="button-left" onclick="controller.r()">r</button>
+				<button id="r2" class="button-left" onclick="controller.r2()">r<sup>2</sup></button>
+				<button id="rmin1" class="button-left" onclick="controller.rmin1()">r<sup>-1</sup></button>
+				<button id="b" class="button-left" onclick="controller.b()">b</button>
+				<button id="b2" class="button-left" onclick="controller.b2()">b<sup>2</sup></button>
+				<button id="bmin1" class="button-left" onclick="controller.bmin1()">b<sup>-1</sup></button>
+				<button id="d" class="button-left" onclick="controller.d()">d</button>
+				<button id="d2" class="button-left" onclick="controller.d2()">d<sup>2</sup></button>
+				<button id="dmin1" class="button-left" onclick="controller.dmin1()">d<sup>-1</sup></button>
+			</div>
+			<canvas id="cube-viewer" tabindex='1' width="620" height="400"></canvas>
+		</div>
+		<div id="bottom">
+			<table id="keyboard" cellspacing="0" cellpadding="0">
+				<tr class="key-row">
+					<td><button id="r-bottom" class="button-bottom" onclick="controller.addr()">r</button></td>
+					<td><button id="r2-bottom" class="button-bottom" onclick="controller.addr2()">r<sup>2</sup></button></td>
+					<td><button id="rmin1-bottom" class="button-bottom" onclick="controller.addrmin1()">r<sup>-1</sup></button></td>
+				</tr>
+				<tr class="key-row">
+					<td><button id="b-bottom" class="button-bottom" onclick="controller.addb()">b</button></td>
+					<td><button id="b2-bottom" class="button-bottom" onclick="controller.addb2()">b<sup>2</sup></button></td>
+					<td><button id="bmin1-bottom" class="button-bottom" onclick="controller.addbmin1()">b<sup>-1</sup></button></td>
+				</tr>
+				<tr class="key-row">
+					<td><button id="d-bottom" class="button-bottom" onclick="controller.addd()">d</button></td>
+					<td><button id="d2-bottom" class="button-bottom" onclick="controller.addd2()">d<sup>2</sup></button></td>
+					<td><button id="dmin1-bottom" class="button-bottom" onclick="controller.adddmin1()">d<sup>-1</sup></button></td>
+				</tr>
+			</table>
+			
+			<div id="queue"></div>
+			
+			<button id="lancer" class="button-right" onclick="controller.runQueue()">Lancer</button>
+			<button id="pas-a-pas" class="button-right"onclick="controller.stepByStep()">Pas à pas</button>
+			<button id="melanger" class="button-right"onclick="controller.mix()">Mélanger</button>
+			
+			
+			
+			
+			
+		</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="fr">
+<head>
+	<meta charset="utf-8">
+	<title>Applet Eratosthene</title>
+	<link rel="stylesheet" type="text/css" href="comparaison.css">
+	<script type="text/javascript" src="comparaison.js"></script>
+</head>
+<body>
+	<div id="top">
+		<table id="control">
+			<tr height="50%">
+				<td width="50%">n= 56</td>
+				<td width="50%">Temps d'arrêt= 100ms</td>
+			</tr>
+			<tr height="50%">
+				<td width="50%"><button id="start" onclick="start()">Lancer</button></td>
+				<td width="50%"><button id="reset" onclick="reset()">Reset</button></td>
+			</tr>
+		</table>
+	</div>
+	<table id="frames">
+		<tr height="50%">
+			<td width="50%">
+				<iframe id="basique" src="basique.html" width="100%" height="100%"  frameborder="1"></iframe>
+			</td>
+			<td width="50%">
+				<iframe id="amelioree" src="amelioree.html" width="100%" height="100%"></iframe>
+			</td>
+		</tr>
+		<tr height="50%">
+			<td width="50%">
+				<iframe id="era1" src="era1.html" width="100%" height="100%"></iframe>
+			</td>
+			<td width="50%">
+				<iframe id="era2" src="era2.html" width="100%" height="100%"></iframe>
+			</td>
+		</tr>
+	</table>
+</body>
+</html>

@@ -1,0 +1,62 @@
+#container{
+	width: 620px;
+	height: 500px;
+	overflow: hidden;
+	background: "white";
+	position: absolute;
+}
+#top{
+	width: 620px;
+	height: 400px;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+}
+#cube-viewer{
+	width: 620px;
+	height: 400px;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+}
+#bottom{
+	width: 620px;
+	height: 100px;
+	position: absolute;
+	top: 400px;
+	left: 0px;
+}
+
+#queue{
+	font-size: 22px;
+	background-color: #E0FFFF;
+	width: 620px;
+	height: 70px;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	overflow: auto;
+}
+#lancer{
+	width: 200px;
+	height: 30px;
+	position: absolute;
+	top: 70px;
+	left: 0px;
+}
+#melanger{
+	width: 200px;
+	height: 30px;
+	position: absolute;
+	top: 70px;
+	left: 200px;
+}
+#nbrotations{
+	width: 220px;
+	height: 30px;
+	position: absolute;
+	top: 74px;
+	left: 400px;
+	font-size: 22px;
+	text-align: center;
+}

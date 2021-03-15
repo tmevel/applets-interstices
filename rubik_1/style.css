@@ -1,0 +1,86 @@
+#container{
+	width: 700px;
+	height: 500px;
+	overflow: hidden;
+	background: "white";
+	position: absolute;
+}
+#top{
+	width: 700px;
+	height: 400px;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+}
+#left{
+	width:80px;
+	height: 400px;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+}
+#cube-viewer{
+	width: 620px;
+	height: 400px;
+	position: absolute;
+	top: 0px;
+	left: 80px;
+}
+#bottom{
+	width: 700px;
+	height: 100px;
+	position: absolute;
+	top: 400px;
+	left: 0px;
+}
+.button-left{
+	width: 80px;
+	height: 44px;
+}
+.button-bottom{
+	width: 60px;
+	height: 30px;
+}
+.key-row{
+	width: 66px;
+	height: 33px;
+}
+#keyboard{
+	width: 200px;
+	height: 100px;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	border: none;
+}
+#queue{
+	font-size: 22px;
+	background-color: #E0FFFF;
+	width: 500px;
+	height: 70px;
+	position: absolute;
+	top: 0px;
+	left: 200px;
+	overflow: auto;
+}
+#melanger{
+	width: 150px;
+	height: 30px;
+	position: absolute;
+	top: 70px;
+	left: 550px;
+}
+#lancer{
+	width: 150px;
+	height: 30px;
+	position: absolute;
+	top: 70px;
+	left: 200px;
+}
+#pas-a-pas{
+	width: 150px;
+	height: 30px;
+	position: absolute;
+	top: 70px;
+	left: 350px;
+}

@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="fr">
+<head>
+	<meta charset="utf-8">
+	<title>Pledge</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script type="text/javascript" src="applet.js"></script>
+</head>
+<body>
+	<div id="container">
+		<canvas id="canvas" width="880" height="380" onmousemove="map.mouse(event);" onmousedown="map.mouse(event);" onmouseup="map.mouseup(event);" oncontextmenu="return false"></canvas>
+		<div id="bottom">
+			<button id="changeMode" onclick="map.changeMode();">Modifier le labyrinthe</button>
+			<div id="editor">
+				<text id="consigne">Maintenez le clic gauche pour poser un mur, clic droit pour effacer. Maintenez le clic gauche sur le robot pour le déplacer.</text>
+				<table id="editor-control">
+					<tr>
+						<td>
+							<button id="tourner" onclick="map.tournerR();">Tourner le robot</button>
+						</td>
+						<td>
+							<button id="effacer" onclick="map.effacer();">Tout effacer</button>
+						</td>
+					</tr>
+				</table>
+			</div>
+			<div id="robot">
+				<table id="strategie1">
+					<tr>
+						<td>
+							<text>Stratégie</text>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<select id="strat" oninput="setStrategie()">
+								<option value="pledge">Pledge</option>
+								<option value="coller">Coller à l'obstacle</option>
+								<option value="manuelle">Manuelle</option> 
+								<option value="direction">Conserver la direction</option>
+							</select>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<select id="dir" oninput="setStrategie()">
+								<option value="droite">Mur à droite</option>
+								<option value="gauche">Mur à gauche</option>
+							</select>
+						</td>
+					</tr>
+				</table>
+				<table id="strategie2">
+					<tr>
+						<td>
+							<button id="lancer" onclick="lancerR();">Lancer</button>
+						</td>
+						<td>
+							<button id="pas" onclick="pasapas();">Pas à pas</button>
+						</td>
+						<td>
+							<button id="recommencer" onclick="setStrategie();">Recommencer</button>
+						</td>
+					</tr>
+				</table>
+				<text id="title-control">Contrôles du robot</text>
+				<table id="robot-control1">
+					<tr>
+						<td>
+							<button id="tournerD" onclick="map.controller.tournerD();">Tourner (mur à D)</button>
+						</td>
+						<td>
+							<button id="avancer" onclick="map.controller.avancer();">Avancer</button>
+						</td>
+						<td>
+							<button id="tournerG" onclick="map.controller.tournerG();">Tourner (mur à G)</button>
+						</td>
+					</tr>
+				</table>
+				<table id="robot-control2">
+					<tr>
+						<td>
+							<button id="collerD" onclick="map.controller.collerD();">Avancer (mur à D)</button>
+						</td>
+						<td>
+							<button id="collerG" onclick="map.controller.collerG();">Avancer (mur à G)</button>
+						</td>
+					</tr>
+				</table>
+				<table id="info">
+					<tr>
+						<td>
+							<div id="log"></div>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<div id="somme-angle">Somme des angles: 0</div>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<div id="longueur">Longueur du chemin: 0</div>
+						</td>
+					</tr>
+				</table>
+			</div>
+		</div>
+	</div>
+</body>

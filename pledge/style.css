@@ -1,0 +1,125 @@
+html,body{
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+}
+#container{
+	position: absolute;
+	margin: 0px;
+	width: 900px;
+	height: 520px;
+	overflow: hidden;
+	background: #081F4E;
+	color: #FFFFFF;
+}
+canvas{
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	width: 880px;
+	height: 380px;
+}
+#bottom{
+	position: absolute;
+	bottom: 0px;
+	right: 0px;
+	width: 900px;
+	height: 120px;
+}
+#editor, #robot{
+	position: absolute;
+	bottom: 0px;
+	left: 0px;
+	width: 700px;
+	height: 120px;
+}
+#changeMode{
+	position: absolute;
+	bottom: 0px;
+	right: 0px;
+	width: 200px;
+	height: 40px;
+}
+button:hover{
+	background-color: #5555EE;
+	color: #FFFFFF;
+}
+button{
+	width: 100%;
+	height: 100%;
+	border: 2px solid #5555FF;
+}
+#effacer, #placer, #tourner{
+	width: 170px;
+	height: 40px;
+}
+table{
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	overflow: hidden;
+}
+#strategie1{
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 200px;
+	height: 80px;
+}
+#strategie2{
+	position: absolute;
+	bottom: 0px;
+	left: 0px;
+	width: 200px;
+	height: 35px;
+}
+#title-control{
+	position: absolute;
+	top: 0px;
+	left: 200px;
+	width: 250px;
+	height: 30px;
+	text-align: center;
+}
+#robot-control1{
+	position: absolute;
+	bottom: 50px;
+	left: 200px;
+	width: 250px;
+	height: 50px;
+}
+#robot-control2{
+	position: absolute;
+	bottom: 0px;
+	left: 200px;
+	width: 250px;
+	height: 50px;
+}
+#info{
+	position: absolute;
+	bottom: 0px;
+	right: 0px;
+	width: 250px;
+	height: 120px;
+}
+select{
+	width: 100%;
+	height: 100%;
+	border: 2px solid #5555FF;
+}
+datalist{
+	display: auto;
+}
+#consigne{
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	width: 700px;
+	height: 40px;
+	text-align: center;
+}
+#log{
+	height: 40px;
+	display: block;
+}

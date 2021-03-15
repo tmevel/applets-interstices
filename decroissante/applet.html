@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="fr">
+<head>
+	<meta charset="utf-8">
+	<title>Applet Systèmes dynamiques</title>
+	<script type="text/javascript" src="applet.js"></script>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<div id="title"><p>Décroissance exponentielle de la population P au cours du temps t</p><p>P’(t) = -m P(t) et P(t) = P0 exp(-m t)</p></div>
+	<div id="container">
+			<div id="control">
+				<table>
+					<tr id="legend-panel">
+						<td>
+							<div id="legend-panel-content">
+							</div>
+						</td>
+					</tr>
+					<tr id="input-panel">
+						<td>
+							<table>
+								<tr>
+									<td><text>P0 = </text></td>
+									<td><input type="text" id="P0" onkeydown="keydown();" onkeyup="keydown();"></input></td>
+								</tr>
+								<tr>
+									<td><text>m = </text></td>
+									<td><input type="text" id="l" onkeydown="keydown();" onkeyup="keydown();"></input></td>
+								</tr>
+								<tr>
+									<td><text>&tau; = </text></td>
+									<td><text id="tau"></text></td>
+								</tr>
+								<tr>
+									<td><button onclick="dispInfo()" id="help">?</button></td>
+									<td><button onclick="add();">Ajouter</button></td>
+								</tr>
+								<tr>
+									<td><button onclick="remove();">Supprimer</button></td>
+									<td><button onclick="removeAll();">Supprimer tout</button></td>
+								</tr>
+							</table>
+						</td>
+					</tr>
+				</table>
+			</div>
+			<div id="canvas-container">
+				<canvas id="graph" height="1000" width="1200" onmousemove="move(event);"></canvas>
+			</div>
+	</div>
+</body>

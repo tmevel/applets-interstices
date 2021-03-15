@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="fr">
+<head>
+	<meta charset="utf-8">
+	<title>Sac à dos</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script type="text/javascript" src="applet.js"></script>
+</head>
+<body>
+	<div id="container">
+		<img id="top" src="fondHaut.jpg"/>
+		<div id="left">
+			<img src="fondColonneGauche.jpg">
+			<input type="image" id="button1" src="button_un_joueur.png" onmouseover="this.src='button_un_joueur_bis.png'" onmouseout="this.src='button_un_joueur.png'" onclick="manager.nbrPlayer(1);"/>
+			<input type="image" id="button2" src="button_deux_joueurs.png" onmouseover="this.src='button_deux_joueurs_bis.png'" onmouseout="this.src='button_deux_joueurs.png'" onclick="manager.nbrPlayer(2);"/>
+			<input type="image" id="retour" src="button_retour.png" onmouseover="this.src='button_retour_bis.png'" onmouseout="this.src='button_retour.png'" onclick="manager.retour();"/>
+		</div>
+		<div id="main">
+			<div id="accueil">
+				<img src="pageAccueil.jpg">
+			</div>
+			<div id="principale">
+				<img src="principale.jpg">
+				<img id="regle" src="regle1joueur.png"/>
+				<table id="difficultee">
+					<tr>
+						<td>
+							<input type="image" id="debutant" src="button_debutant.png" onmouseover="this.src='button_debutant_bis.png'" onmouseout="this.src='button_debutant.png'" onclick="manager.newGame(0);"/>
+						</td>
+						<td>
+							<input type="image" id="maitre" src="button_maitre.png" onmouseover="this.src='button_maitre_bis.png'" onmouseout="this.src='button_maitre.png'" onclick="manager.newGame(1);"/>
+						</td>
+						<td>
+							<input type="image" id="expert" src="button_expert.png" onmouseover="this.src='button_expert_bis.png'" onmouseout="this.src='button_expert.png'" onclick="manager.newGame(2);"/>
+						</td>
+					</tr>
+				</table>
+			</div>
+			<div id="jeu">
+				<img src="fond_jeu1.jpg"/>
+				<img id="sac" src="panier.png"/>
+				<img id="barre" src="sac_barre.png"/>
+				<text id="chrono"></text>
+				
+				<img id="indice" src="indice.png"/>
+				<img id="indice1" src="indice1.png"/>
+				
+				<text id="qte" class="label n">Quantité</text>
+				<text id="poids" class="label p">Poids</text>
+				<text id="val" class="label v">Valeur</text>
+				<input type="image" id="objet0" class="imo o0"/>
+				<text id="nobjet0" class="nb n o0"></text>
+				<text id="pobjet0" class="nb p o0"></text>
+				<text id="vobjet0" class="nb v o0"></text>
+				<input type="image" id="objet1" class="imo o1"/>
+				<text id="nobjet1" class="nb n o1"></text>
+				<text id="pobjet1" class="nb p o1"></text>
+				<text id="vobjet1" class="nb v o1"></text>
+				<input type="image" id="objet2" class="imo o2"/>
+				<text id="nobjet2" class="nb n o2"></text>
+				<text id="pobjet2" class="nb p o2"></text>
+				<text id="vobjet2" class="nb v o2"></text>
+				<input type="image" id="objet3" class="imo o3"/>
+				<text id="nobjet3" class="nb n o3"></text>
+				<text id="pobjet3" class="nb p o3"></text>
+				<text id="vobjet3" class="nb v o3"></text>
+				
+				<input type="image" id="slot0"/>
+				<input type="image" id="slot1"/>
+				<input type="image" id="slot2"/>
+				<input type="image" id="slot3"/>
+				<input type="image" id="slot4"/>
+				<input type="image" id="slot5"/>
+				<input type="image" id="slot6"/>
+				<input type="image" id="slot7"/>
+				<input type="image" id="slot8"/>
+				<input type="image" id="slot9"/>
+				<input type="image" id="slot10"/>
+				<input type="image" id="slot11"/>
+				<input type="image" id="slot12"/>
+				
+				<text id="l1"></text>
+				<text id="l2"></text>
+				<text id="resultat"></text>
+				<text id="joueur"></text>
+				<input type="image" id="rejouer" src="button_rejouer.png" onclick="manager.rejouer();"/>
+				<input type="image" id="nouvelle" src="button_newJeu.png" onclick="manager.nouvelle();"/>
+				<input type="image" id="valider" src="button_valider.png" onclick="manager.end();"/>
+				
+				<div id="bar-container">
+					<div id="bar-poids"></div>
+					<div id="bar-poids-lim"></div>
+					<div id="bar-valeur"></div>
+					<div id="bar-valeur-lim"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>

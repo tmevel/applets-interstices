@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="fr">
+<head>
+	<meta charset="utf-8">
+	<title>Voyageur de commerce</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script type="text/javascript" src="applet.js"></script>
+</head>
+<body>
+	<div id="container">
+		<img id="top" src="fondHaut.jpg"/>
+		<div id="left">
+			<img src="fondColonneGauche.jpg">
+			<input type="image" id="button1" src="button_un_joueur.png" onmouseover="this.src='button_un_joueur_bis.png'" onmouseout="this.src='button_un_joueur.png'" onclick="manager.nbrPlayer(1);"/>
+			<input type="image" id="button2" src="button_deux_joueurs.png" onmouseover="this.src='button_deux_joueurs_bis.png'" onmouseout="this.src='button_deux_joueurs.png'" onclick="manager.nbrPlayer(2);"/>
+			<input type="image" id="retour" src="button_retour.png" onmouseover="this.src='button_retour_bis.png'" onmouseout="this.src='button_retour.png'" onclick="manager.retour();"/>
+		</div>
+		<div id="main">
+			<div id="accueil">
+				<img src="pageAccueil.jpg">
+			</div>
+			<div id="principale">
+				<img src="principale.jpg">
+				<img id="regle" src="regle1joueur.png"/>
+				<table id="difficultee">
+					<tr>
+						<td>
+							<input type="image" id="debutant" src="button_debutant.png" onmouseover="this.src='button_debutant_bis.png'" onmouseout="this.src='button_debutant.png'" onclick="manager.newGame(0);"/>
+						</td>
+						<td>
+							<input type="image" id="maitre" src="button_maitre.png" onmouseover="this.src='button_maitre_bis.png'" onmouseout="this.src='button_maitre.png'" onclick="manager.newGame(1);"/>
+						</td>
+						<td>
+							<input type="image" id="expert" src="button_expert.png" onmouseover="this.src='button_expert_bis.png'" onmouseout="this.src='button_expert.png'" onclick="manager.newGame(2);"/>
+						</td>
+					</tr>
+				</table>
+			</div>
+			<div id="jeu">
+				<img src="fond.jpg"/>
+				<img id="france" src="carte_france.png"/>
+				<img id="indice" src="indice3.png"/>
+				<text id="chrono"></text>
+				<text id="depart"></text>
+				<text id="ht"></text>
+				<text id="hr"></text>
+				<input type="image" id="distances" src="button_distance.png" onmouseover="manager.partie.afficherDist();" onmouseout="manager.partie.enleverDist();"/>
+				<input type="image" id="enlever" src="button_RemiseAZero.png" onclick="manager.partie.reset();"/>
+				<input type="image" id="solution" src="button_solution.png" onclick="manager.partie.solution();"/>
+				<text id="alerte-temps">Attention, vous avez dépassé le temps maximal!</text>
+				<text id="resultat"></text>
+				<text id="joueur"></text>
+				<text id="l1"></text>
+				<text id="l2"></text>
+				<canvas id="carte" width="527" height="480"></canvas>
+				<div id="villes"></div>
+				<input type="image" id="rejouer" src="button_rejouer.png" onclick="manager.rejouer();" onmouseover="this.src='button_rejouer_bis.png'" onmouseout="this.src='button_rejouer.png'"/>
+				<input type="image" id="nouvelle" src="button_nouvelle_carte.png" onclick="manager.nouvelle();" onmouseover="this.src='button_nouvelle_carte_bis.png'" onmouseout="this.src='button_nouvelle_carte.png'"/>
+				
+			</div>
+		</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="fr">
+<head>
+	<meta charset="utf-8">
+	<title>Nim</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script type="text/javascript" src="applet.js"></script>
+</head>
+<body>
+	<div id="container">
+		<img id="top" src="images/fondHaut.jpg"/>
+		<div id="left">
+			<img src="images/fondColonneGauche.jpg">
+			<input type="image" id="retour" src="images/button_retour.png" onmouseover="this.src='images/button_retour_bis.png'" onmouseout="this.src='images/button_retour.png'" onclick="manager.retour();"/>
+			<input type="image" id="allumettes-b" src="images/botton_allumettes.png" onmouseover="this.src='images/botton_allumettes_bis.png'" onmouseout="this.src='images/botton_allumettes.png'" onclick="manager.allumettes();"/>
+			<input type="image" id="marienbad-b" src="images/botton_marienbad.png" onmouseover="this.src='images/botton_marienbad_bis.png'" onmouseout="this.src='images/botton_marienbad.png'" onclick="manager.marienbad();"/>
+			<input type="image" id="pieces-b" src="images/botton_Coin_Strip.png" onmouseover="this.src='images/botton_Coin_Strip_bis.png'" onmouseout="this.src='images/botton_Coin_Strip.png'" onclick="manager.pieces();"/>
+			<input type="image" id="morpion-b" src="images/botton_morpion.png" onmouseover="this.src='images/botton_morpion_bis.png'" onmouseout="this.src='images/botton_morpion.png'" onclick="manager.morpion();"/>
+		</div>
+		<div id="right">
+			<img src="images/fondColonneDroite.jpg">
+		</div>
+		<div id="main">
+			<div id="accueil">
+				<img src="images/pageAccueil.jpg">
+			</div>
+			<div id="principale">
+				<img src="images/principale.jpg">
+				<img id="regle"/>
+				<table id="joueurs" class="choix">
+					<tr>
+						<td>
+							<input type="image" id="1joueur" src="images/botton_un_joueur.png" onmouseover="this.src='images/botton_un_joueur_bis.png'" onmouseout="this.src='images/botton_un_joueur.png'" onclick="manager.nJoueurs(1);"/>
+						</td>
+						<td>
+							<input type="image" id="2joueurs" src="images/botton_deux_joueurs.png" onmouseover="this.src='images/botton_deux_joueurs_bis.png'" onmouseout="this.src='images/botton_deux_joueurs.png'" onclick="manager.nJoueurs(2);"/>
+						</td>
+					</tr>
+				</table>
+				<table id="difficultee" class="choix">
+					<tr>
+						<td>
+							<input type="image" id="debutant" src="images/botton_debutant.png" onmouseover="this.src='images/botton_debutant_bis.png'" onmouseout="this.src='images/botton_debutant.png'" onclick="manager.difficulty(1);"/>
+						</td>
+						<td>
+							<input type="image" id="maitre" src="images/botton_maitre.png" onmouseover="this.src='images/botton_maitre_bis.png'" onmouseout="this.src='images/botton_maitre.png'" onclick="manager.difficulty(2);"/>
+						</td>
+						<td>
+							<input type="image" id="expert" src="images/botton_expert.png" onmouseover="this.src='images/botton_expert_bis.png'" onmouseout="this.src='images/botton_expert.png'" onclick="manager.difficulty(3);"/>
+						</td>
+					</tr>
+				</table>
+				<table id="premier" class="choix">
+					<tr>
+						<td>
+							<input type="image" id="je_commence" src="images/botton_je_commence.png" onmouseover="this.src='images/botton_je_commence_bis.png'" onmouseout="this.src='images/botton_je_commence.png'" onclick="manager.commence(1);"/>
+						</td>
+						<td>
+							<input type="image" id="ordinateur_commence" src="images/botton_ordinateur_commence.png" onmouseover="this.src='images/botton_ordinateur_commence_bis.png'" onmouseout="this.src='images/botton_ordinateur_commence.png'" onclick="manager.commence(2);"/>
+						</td>
+						<td>
+							<input type="image" id="chacun_son_tour" src="images/botton_chacun_son_tour.png" onmouseover="this.src='images/botton_chacun_son_tour_bis.png'" onmouseout="this.src='images/botton_chacun_son_tour.png'" onclick="manager.commence(0);"/>
+						</td>
+					</tr>
+				</table>
+			</div>
+			<div id="jeu">
+				<img id="adversaire-fond" src="images/adversaire.jpg"></img>
+				<img id="adversaire" src="images/adversaire/niveauAdversaire1/3.gif"></img>
+				<img id="bulle" src="images/adversaire/bulle.png"></img>
+				<text id="bulle-text">Au joueur 1 de jouer</text>
+				<text id="gagnant"></text>
+				<text id="sc1">S C O R E</text>
+				<table id="score">
+					<tr>
+						<td id="j1"></td><td id="j2"></td>
+					</tr>
+					<tr>
+						<td id="s1"></td><td id="s2"></td>
+					</tr>
+				</table>
+				<div id="allumettes" class="plateau">
+					<input type="image" id="suivantA" src="images/botton_jouer.png" onclick="currentGame.auSuivant();"/>
+					<img src="images/allumettes/jeu_allumettes/centre.jpg"/>
+					<table id="tabA">
+					</table>
+					<text id="nA"></text>
+				</div>
+				<div id="marienbad" class="plateau">
+					<input type="image" id="suivantM" src="images/botton_jouer.png" onclick="currentGame.auSuivant();"/>
+					<img src="images/allumettes/marienbad135/centre.jpg"/>
+					<table id="tabM0">
+					</table>
+					<table id="tabM1">
+					</table>
+					<table id="tabM2">
+					</table>
+				</div>
+				<div id="pieces" class="plateau">
+					<img src="images/pieces/centre.jpg"/>
+					<table id="tabMarbre">
+					</table>
+					<table id="tabPiece">
+					</table>
+					<input type="image" id="suivantP" src="images/botton_jouer.png" onclick="currentGame.rejouer();"/>
+				</div>
+				<div id="morpion" class="plateau">
+					<img src="images/echiquier/centre.png"/>
+					<table id="tabMorpion">
+						<tr class="morpion-line">
+							<td id="c-1-1" class="morpion-cell"></td>
+							<td id="c-1-2" class="morpion-cell"></td>
+							<td id="c-1-3" class="morpion-cell"></td>
+						</tr>
+						<tr class="morpion-line">
+							<td id="c-2-1" class="morpion-cell"></td>
+							<td id="c-2-2" class="morpion-cell"></td>
+							<td id="c-2-3" class="morpion-cell"></td>
+						</tr>
+						<tr class="morpion-line">
+							<td id="c-3-1" class="morpion-cell"></td>
+							<td id="c-3-2" class="morpion-cell"></td>
+							<td id="c-3-3" class="morpion-cell"></td>
+						</tr>
+					</table>
+					<input type="image" id="suivantMo" src="images/botton_jouer.png" onclick="currentGame.auSuivant();"/>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>

@@ -1,0 +1,102 @@
+html,body{
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+}
+#canvas-container{
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	width: 70%;
+	height: 90%;
+}
+#container{
+	position: absolute;
+	right: 0;
+	top: 12%;
+	width: 100%;
+	height: 88%;
+}
+#title{
+	position: absolute;
+	right: 0;
+	top: 0;
+	width: 100%;
+	height: 12%;
+	color: #FFFFFF;
+	font-size:large;
+	background-color: #081F4E;
+	text-align: center;
+}
+#control{
+	width: 30%;
+	height: 100%;
+	color: #000000;
+	background-color: #829eeb;
+}
+#legend-panel{
+	width: 100%;
+	height: 70%;
+}
+#legend-panel-content{
+	width: 90%;
+	height: 50%;
+	margin: auto;
+}
+#input-panel{
+	width: 100%;
+	height: 30%;
+}
+canvas{
+	position: relative;
+	margin: 2.5% 2.5%;
+	height: 95%;
+	object-fit: fill;
+	background-color: #FFFFFF;
+}
+table{
+	height: 100%;
+	margin: auto;
+	table-layout: fixed;
+}
+.n-legend{
+	background-color: #FFFFFF;
+	border: 2px solid #5555FF;
+	width: 100%;
+	text-align: center;
+}
+.h-legend{
+	background-color: #C0C0C0;
+	border: 2px solid #5555FF;
+	width: 100%;
+	text-align: center;
+}
+.n-legend:hover{
+	background-color: #808080;
+	border: 2px solid #5555FF;
+	width: 100%;
+	text-align: center;
+}
+button:hover{
+	background-color: #5555EE;
+	color: #FFFFFF;
+	border: 2px solid #5555FF;
+}
+button{
+	width: 100%;
+	border: 2px solid #5555FF;
+}
+#help{
+	width: 100%;
+	border: 2px solid #E00000;
+}
+#help:hover{
+	background-color: #E00000;
+	color: #FFFFFF;
+	border: 2px solid #E00000;
+}
+input{
+	width: 90%;
+	margin: auto;
+}
